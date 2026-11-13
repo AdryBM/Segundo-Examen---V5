@@ -1,0 +1,24 @@
+// Centra el contenido y limita su ancho
+@mixin contenido-centrado {
+  max-width: $ancho-contenido;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// Flex: elementos a los extremos, centrados en vertical
+@mixin flex-entre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Base común de todos los botones
+@mixin boton-base {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

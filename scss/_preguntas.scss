@@ -1,0 +1,106 @@
+// PREGUNTAS FRECUENTES
+.preguntas-frecuentes {
+  @include contenido-centrado;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.preguntas-titulo {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.preguntas-descripcion {
+  color: $color-gris-azulado;
+  max-width: 540px;
+  margin: 0 auto 50px;
+}
+
+.preguntas-lista {
+  max-width: 540px;
+  margin: 0 auto 50px;
+  border-top: 1px solid $color-borde;
+  text-align: left;
+}
+
+// Cada pregunta tiene una línea separadora debajo
+.pregunta {
+  border-bottom: 1px solid $color-borde;
+}
+
+.pregunta-boton {
+  @include flex-entre;
+  width: 100%;
+  padding: 20px 0;
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: $color-azul-oscuro;
+  cursor: pointer; // La manito al pasar el cursor
+  transition: color 0.3s ease;
+
+  // Hover: el título se pone rojo
+  &:hover {
+    color: $color-rojo;
+  }
+}
+
+// Pregunta abierta: el título vuelve a negro, aunque el cursor siga encima
+.pregunta-abierta .pregunta-boton,
+.pregunta-abierta .pregunta-boton:hover {
+  color: $color-azul-oscuro;
+}
+
+// Recién cerrada: el título sigue negro hasta que el cursor salga de la pregunta
+.pregunta-recien-cerrada .pregunta-boton:hover {
+  color: $color-azul-oscuro;
+}
+
+.pregunta-flecha {
+  width: 18px;
+  height: auto;
+}
+
+// Estado cerrado: se ve la flecha azul y la respuesta está oculta
+.flecha-roja {
+  display: none;
+}
+
+.pregunta-respuesta {
+  display: none;
+  padding-bottom: 20px;
+  color: $color-gris-azulado;
+  font-size: 15px;
+  line-height: 2;
+}
+
+// Estado abierto (la clase la agrega el JS): flecha roja hacia arriba y respuesta visible
+.pregunta-abierta {
+  .flecha-azul {
+    display: none;
+  }
+
+  .flecha-roja {
+    display: block;
+    transform: rotate(180deg);
+  }
+
+  .pregunta-respuesta {
+    display: block;
+  }
+}
+
+// PREGUNTAS EN CELULAR
+@media (max-width: $corte-celular) {
+  .preguntas-frecuentes {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .preguntas-titulo {
+    font-size: 24px;
+  }
+}

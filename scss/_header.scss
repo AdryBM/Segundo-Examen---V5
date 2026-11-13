@@ -1,0 +1,88 @@
+.encabezado {
+  @include flex-entre;
+  @include contenido-centrado;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  // Hamburguesa: oculta en escritorio
+  .boton-menu {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 8px;
+  }
+}
+
+//  MENÚ
+.menu-lista {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  a {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-rojo;
+    }
+  }
+}
+
+// Login: link con aspecto de botón (usa la base común de botones)
+.boton-login {
+  @include boton-base;
+  background-color: $color-rojo;
+  color: $color-blanco;
+  border: 2px solid $color-rojo;
+  padding: 10px 40px;
+
+  // Hover: se invierten los colores
+  &:hover {
+    background-color: $color-blanco;
+    color: $color-rojo;
+  }
+}
+
+// HEADER EN CELULAR
+@media (max-width: $corte-celular) {
+  .encabezado {
+    flex-wrap: wrap;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .boton-menu {
+      display: block;
+    }
+  }
+
+  // Menú oculto hasta que el JS agregue la clase open
+  .menu-principal {
+    display: none;
+    width: 100%;
+    flex-basis: 100%;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  .menu-lista {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 20px;
+    text-align: center;
+
+    li {
+      width: 100%;
+      padding: 14px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+
+  .boton-login {
+    display: block;
+  }
+}

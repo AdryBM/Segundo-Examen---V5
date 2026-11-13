@@ -1,0 +1,39 @@
+# Guía de estilo
+
+## Diseño
+
+Los diseños se crearon con los siguientes anchos:
+
+-   Mobile: 375px
+-   Desktop: 1440px
+
+## Colores
+
+### Primario
+
+- Soft Blue: hsl(231, 69%, 60%)
+- Soft Red: hsl(0, 94%, 66%)
+
+### Neutros
+
+- Grayish Blue: hsl(229, 8%, 60%)
+- Very Dark Blue: hsl(229, 31%, 21%)
+
+
+## Typografía
+
+### Body
+
+- Font size: 18px
+
+### Fonts
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 400, 500
+
+
+## Icons
+
+Para los íconos sociales, puede usar los íconos provistos o una biblioteca de íconos de fuentes. Ej:
+
+- [Font Awesome](https://fontawesome.com)

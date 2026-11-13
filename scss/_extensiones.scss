@@ -1,0 +1,100 @@
+// EXTENSIONES (Download the extension)
+.extensiones {
+  @include contenido-centrado;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.extensiones-titulo {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.extensiones-descripcion {
+  color: $color-gris-azulado;
+  max-width: 540px;
+  margin: 0 auto 60px;
+}
+
+// Flex: 3 tarjetas en fila, alineadas arriba para poder escalonarlas
+.extensiones-lista {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+
+// TARJETA DE NAVEGADOR
+.tarjeta-navegador {
+  flex: 1;
+  max-width: 280px;
+  padding: 40px 20px 30px;
+  background-color: $color-blanco;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  // Logo del navegador, centrado
+  img {
+    display: block;
+    width: 100px;
+    margin: 0 auto 30px;
+  }
+
+  .boton {
+    display: block;
+  }
+}
+
+.tarjeta-navegador-titulo {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.tarjeta-navegador-version {
+  color: $color-gris-azulado;
+  font-size: 16px;
+  margin-bottom: 30px;
+
+  // Línea de puntos debajo de la versión (imagen provista bg-dots.svg)
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    margin-top: 20px;
+    background-image: url("../img/bg-dots.svg");
+    background-repeat: repeat-x;
+    background-position: center;
+  }
+}
+
+.tarjeta-firefox {
+  margin-top: 40px;
+}
+
+.tarjeta-opera {
+  margin-top: 80px;
+}
+
+// EXTENSIONES EN CELULAR
+@media (max-width: $corte-celular) {
+  .extensiones {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .extensiones-lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .tarjeta-navegador {
+    width: 100%;
+  }
+
+  .tarjeta-firefox,
+  .tarjeta-opera {
+    margin-top: 0;
+  }
+}

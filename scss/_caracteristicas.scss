@@ -1,0 +1,133 @@
+//  FEATURES
+.caracteristicas {
+  @include contenido-centrado;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.caracteristicas-titulo {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.caracteristicas-descripcion {
+  color: $color-gris-azulado;
+  max-width: 540px;
+  margin: 0 auto 50px;
+}
+
+// PESTAÑAS 
+// Tres pestañas en fila, de igual ancho, con una línea debajo
+.pestanas {
+  display: flex;
+  max-width: 730px;
+  margin: 0 auto 70px;
+  border-bottom: 1px solid $color-borde;
+
+  .pestana {
+    flex: 1;
+  }
+
+  button {
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    border: 0;
+    border-bottom: 4px solid transparent;
+    color: $color-azul-oscuro;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-rojo;
+    }
+  } 
+  .pestana-activa button {
+    border-bottom-color: $color-rojo;
+  }
+}
+
+// CONTENIDO DE LA PESTAÑA 
+// Flex: ilustración a la izquierda y texto a la derecha
+.caracteristica {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  text-align: left;
+
+  .caracteristica-ilustracion,
+  .caracteristica-texto {
+    flex: 1;
+  }
+}
+
+// Forma azul detrás de la ilustración, hasta el borde izquierdo
+.caracteristica-ilustracion {
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    width: 100vw;
+    height: 80%;
+    background-color: $color-azul;
+    border-bottom-right-radius: 200px;
+    z-index: -1;
+  }
+}
+
+.caracteristica-titulo {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.caracteristica-descripcion {
+  color: $color-gris-azulado;
+  margin-bottom: 30px;
+}
+
+// FEATURES EN CELULAR 
+@media (max-width: $corte-celular) {
+  .caracteristicas {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .caracteristica-ilustracion {
+    &::after {
+      top: 20%;       
+      right: 15%;     
+      width: 140vw;
+      height: 95%;    
+    }
+  }
+
+  // Pestañas en columna, cada una con su línea separadora
+  .pestanas {
+    flex-direction: column;
+    margin-bottom: 40px;
+    border-top: 1px solid $color-borde;
+    border-bottom: 0;
+
+    .pestana {
+      border-bottom: 1px solid $color-borde;
+    }
+
+    // El botón ocupa solo el ancho del texto, así la línea roja queda corta
+    button {
+      width: auto;
+      padding: 18px 10px;
+    }
+  }
+
+  // Ilustración arriba, texto abajo y centrado
+  .caracteristica {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}

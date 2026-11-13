@@ -1,0 +1,82 @@
+// El fondo ocupa todo el ancho; el contenido va centrado con el mixin
+.pie-pagina {
+  background-color: $color-azul-oscuro;
+  color: $color-blanco;
+  padding: 40px 0;
+}
+
+// Flex: logo y menú a la izquierda, redes a la derecha
+.pie-pagina-contenido {
+  @include contenido-centrado;
+  @include flex-entre;
+}
+
+// Logo y links en fila
+.pie-pagina-marca {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.pie-pagina-menu ul {
+  display: flex;
+  gap: 40px;
+}
+
+.pie-pagina-menu a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-rojo;
+  }
+}
+
+// Íconos de redes en fila
+.pie-pagina-redes {
+  display: flex;
+  gap: 40px;
+
+  img {
+    display: block;
+    width: 24px;
+  }
+
+  // Ícono rojo oculto por defecto (va dentro del bloque para ganarle a "img")
+  .icono-hover {
+    display: none;
+  }
+
+  // Al pasar el cursor se intercambian los dos íconos
+  a:hover {
+    .icono-normal {
+      display: none;
+    }
+
+    .icono-hover {
+      display: block;
+    }
+  }
+}
+
+// FOOTER EN CELULAR
+// Todo apilado y centrado: logo, links y redes
+@media (max-width: $corte-celular) {
+  .pie-pagina-contenido {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .pie-pagina-marca {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .pie-pagina-menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}

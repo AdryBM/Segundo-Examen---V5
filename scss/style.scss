@@ -1,0 +1,15 @@
+// Fuente de la guía de estilos: Rubik 400 y 500
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+// Variables y mixins primero, porque los demás los usan
+@import "variables";
+@import "mixins";
+@import "base";
+@import "botones";
+@import "header";
+@import "hero";
+@import "caracteristicas";
+@import "extensiones";
+@import "preguntas";
+@import "contacto";
+@import "footer";

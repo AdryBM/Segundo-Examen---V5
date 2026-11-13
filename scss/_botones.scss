@@ -1,0 +1,44 @@
+
+// Base común: la define el mixin "boton-base"
+.boton {
+  @include boton-base;
+  border: 2px solid transparent;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Principal: azul con texto blanco
+.boton-principal {
+  background-color: $color-azul;
+  color: $color-blanco;
+  border-color: $color-azul;
+
+  // Hover: se invierten los colores
+  &:hover {
+    background-color: $color-blanco;
+    color: $color-azul;
+  }
+}
+
+// Secundario: gris claro con texto oscuro
+.boton-secundario {
+  background-color: $color-gris-claro;
+  color: $color-azul-oscuro;
+  border-color: $color-gris-claro;
+
+  &:hover {
+    background-color: $color-blanco;
+    border-color: $color-azul-oscuro;
+  }
+}
+
+// Secundario rojo: el botón "Contact Us" del formulario
+.boton-secundario-rojo {
+  background-color: $color-rojo;
+  color: $color-blanco;
+  border-color: $color-rojo;
+
+  &:hover {
+    background-color: $color-blanco;
+    color: $color-rojo;
+  }
+}

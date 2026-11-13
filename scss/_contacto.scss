@@ -1,0 +1,104 @@
+// CONTACTO (franja azul)
+.contacto {
+  background-color: $color-azul;
+  color: $color-blanco;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.contacto-cantidad {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.contacto-titulo {
+  font-size: 32px;
+  max-width: 440px;
+  margin: 0 auto 30px;
+}
+
+.formulario-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+// Contenedor del campo: position relative para ubicar el ícono y el mensaje de error
+.campo-email {
+  position: relative;
+  flex: 1;
+
+  input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    color: $color-azul-oscuro;
+
+    // Al escribir: borde rojo en vez del contorno por defecto
+    &:focus {
+      outline: none;
+      border-color: $color-rojo;
+    }
+  }
+}
+
+// Ícono de exclamación: oculto hasta que haya error
+.campo-icono-error {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+// Mensaje de error: barra roja pegada debajo del campo, oculta hasta que haya error
+.campo-mensaje-error {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 4px 10px;
+  background-color: $color-rojo;
+  color: $color-blanco;
+  font-size: 12px;
+  font-style: italic;
+  text-align: left;
+  border-radius: 0 0 5px 5px;
+}
+
+// Estado de error (la clase la agrega el JS)
+.formulario-error {
+  .campo-email input {
+    border-color: $color-rojo;
+  }
+
+  .campo-icono-error,
+  .campo-mensaje-error {
+    display: block;
+  }
+}
+
+//CONTACTO EN CELULAR
+@media (max-width: $corte-celular) {
+  .contacto {
+    padding: 50px 20px;
+  }
+
+  .contacto-titulo {
+    font-size: 24px;
+  }
+
+  // Campo y botón en columna; más espacio para que entre el mensaje de error
+  .formulario-contacto {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

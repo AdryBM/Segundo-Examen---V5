@@ -1,0 +1,44 @@
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fuente-principal;
+  font-size: $tamano-base;
+  line-height: 1.5;
+  color: $color-azul-oscuro;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Selectores agrupados: mismo peso para todos los títulos
+h1,
+h2,
+h3 {
+  font-weight: 500;
+}
+
+// Los botones no heredan la fuente por defecto
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+// Evita scroll horizontal por las formas azules de fondo
+main {
+  overflow-x: hidden;
+}

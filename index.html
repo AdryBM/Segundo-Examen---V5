@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark - A Simple Bookmark Manager</title>
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- ENCABEZADO  -->
+    <header class="encabezado">
+      <a href="#" class="encabezado-logo">
+        <img src="./img/logo-bookmark.svg" alt="Bookmark" />
+      </a>
+
+      <!-- Botón hamburguesa: solo se ve en mobile -->
+      <button class="boton-menu" type="button" aria-label="Open menu">
+        <img src="./img/icon-hamburger.svg" alt="" />
+      </button>
+
+      <!-- Menú: el id lo usará el JS del menú -->
+      <nav class="menu-principal" id="menu-principal">
+        <ul class="menu-lista">
+          <li><a href="#caracteristicas">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#contacto">Contact</a></li>
+          <li><a href="#" class="boton-login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-ilustracion">
+          <img
+            src="./img/illustration-hero.svg"
+            alt="Bookmark app interface shown on a tablet"
+          />
+        </div>
+        <div class="hero-texto">
+          <h1 class="hero-titulo">A Simple Bookmark Manager</h1>
+          <p class="hero-descripcion">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="hero-botones">
+            <a href="#" class="boton boton-principal">Get it on Chrome</a>
+            <a href="#" class="boton boton-secundario">Get it on Firefox</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="caracteristicas" id="caracteristicas">
+        <h2 class="caracteristicas-titulo">Features</h2>
+        <p class="caracteristicas-descripcion">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+
+        <!-- Pestañas -->
+        <ul class="pestanas">
+          <li class="pestana pestana-activa">
+            <button type="button">Simple Bookmarking</button>
+          </li>
+          <li class="pestana">
+            <button type="button">Speedy Searching</button>
+          </li>
+          <li class="pestana"><button type="button">Easy Sharing</button></li>
+        </ul>
+
+        <!-- Contenido pestaña -->
+        <article class="caracteristica">
+          <div class="caracteristica-ilustracion">
+            <img
+              src="./img/illustration-features-tab-1.svg"
+              alt="Bookmark app showing saved websites"
+            />
+          </div>
+          <div class="caracteristica-texto">
+            <h3 class="caracteristica-titulo">Bookmark in one click</h3>
+            <p class="caracteristica-descripcion">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <a href="#" class="boton boton-principal">More Info</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- EXTENSIONES: 3 tarjetas de navegadores  -->
+      <section class="extensiones" id="extensiones">
+        <h2 class="extensiones-titulo">Download the extension</h2>
+        <p class="extensiones-descripcion">
+          We've got more browsers in the pipeline. Please do let us know if
+          you've got a favorite you'd like us to prioritize.
+        </p>
+
+        <div class="extensiones-lista">
+          <article class="tarjeta-navegador">
+            <img src="./img/logo-chrome.svg" alt="Chrome logo" />
+            <h3 class="tarjeta-navegador-titulo">Add to Chrome</h3>
+            <p class="tarjeta-navegador-version">Minimum version 62</p>
+            <a href="#" class="boton boton-principal"
+              >Add &amp; Install Extension</a
+            >
+          </article>
+
+          <article class="tarjeta-navegador tarjeta-firefox">
+            <img src="./img/logo-firefox.svg" alt="Firefox logo" />
+            <h3 class="tarjeta-navegador-titulo">Add to Firefox</h3>
+            <p class="tarjeta-navegador-version">Minimum version 55</p>
+            <a href="#" class="boton boton-principal"
+              >Add &amp; Install Extension</a
+            >
+          </article>
+
+          <article class="tarjeta-navegador tarjeta-opera">
+            <img src="./img/logo-opera.svg" alt="Opera logo" />
+            <h3 class="tarjeta-navegador-titulo">Add to Opera</h3>
+            <p class="tarjeta-navegador-version">Minimum version 46</p>
+            <a href="#" class="boton boton-principal"
+              >Add &amp; Install Extension</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <section class="preguntas-frecuentes" id="preguntas">
+        <h2 class="preguntas-titulo">Frequently Asked Questions</h2>
+        <p class="preguntas-descripcion">
+          Here are some of our FAQs. If you have any other questions you'd like
+          answered please feel free to email us.
+        </p>
+
+        <div class="preguntas-lista">
+          <article class="pregunta">
+            <h3 class="pregunta-titulo">
+              <button
+                type="button"
+                class="pregunta-boton"
+                aria-expanded="false"
+              >
+                What is Bookmark?
+                <img
+                  src="./img/icon-arrow.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-azul"
+                />
+                <img
+                  src="./img/icon-arrow-rojo.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-roja"
+                />
+              </button>
+            </h3>
+            <p class="pregunta-respuesta">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula.
+            </p>
+          </article>
+
+          <!-- Abierta al cargar, como en el diseño -->
+          <article class="pregunta">
+            <h3 class="pregunta-titulo">
+              <button type="button" class="pregunta-boton" aria-expanded="true">
+                How can I request a new browser?
+                <img
+                  src="./img/icon-arrow.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-azul"
+                />
+                <img
+                  src="./img/icon-arrow-rojo.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-roja"
+                />
+              </button>
+            </h3>
+            <p class="pregunta-respuesta">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </article>
+
+          <article class="pregunta">
+            <h3 class="pregunta-titulo">
+              <button
+                type="button"
+                class="pregunta-boton"
+                aria-expanded="false"
+              >
+                Is there a mobile app?
+                <img
+                  src="./img/icon-arrow.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-azul"
+                />
+                <img
+                  src="./img/icon-arrow-rojo.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-roja"
+                />
+              </button>
+            </h3>
+            <p class="pregunta-respuesta">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula.
+            </p>
+          </article>
+
+          <article class="pregunta">
+            <h3 class="pregunta-titulo">
+              <button
+                type="button"
+                class="pregunta-boton"
+                aria-expanded="false"
+              >
+                What about other Chromium browsers?
+                <img
+                  src="./img/icon-arrow.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-azul"
+                />
+                <img
+                  src="./img/icon-arrow-rojo.svg"
+                  alt=""
+                  class="pregunta-flecha flecha-roja"
+                />
+              </button>
+            </h3>
+            <p class="pregunta-respuesta">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+              massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
+              eros aliquet convallis ultricies. Mauris augue massa, ultricies
+              non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
+              convallis ultricies. Mauris augue massa, ultricies non ligula.
+              Suspendisse imperdiet.
+            </p>
+          </article>
+        </div>
+
+        <a href="#" class="boton boton-principal">More Info</a>
+      </section>
+
+      <!--CONTACTO: franja azul con formulario -->
+      <section class="contacto" id="contacto">
+        <p class="contacto-cantidad">35,000+ already joined</p>
+        <h2 class="contacto-titulo">Stay up-to-date with what we're doing</h2>
+
+        <form class="formulario-contacto" action="#" method="post" novalidate>
+          <div class="campo-email">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              aria-label="Email address"
+              aria-describedby="mensaje-error"
+              required
+            />
+            <img src="./img/icon-error.svg" alt="" class="campo-icono-error" />
+            <p class="campo-mensaje-error" id="mensaje-error">
+              Whoops, make sure it’s an email
+            </p>
+          </div>
+          <button type="submit" class="boton boton-secundario-rojo">
+            Contact Us
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+      <div class="pie-pagina-contenido">
+        <!-- Logo y menú -->
+        <div class="pie-pagina-marca">
+          <a href="#" class="pie-pagina-logo">
+            <img src="./img/logo-bookmark-blanco.svg" alt="Bookmark" />
+          </a>
+          <nav class="pie-pagina-menu">
+            <ul>
+              <li><a href="#caracteristicas">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#contacto">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Redes sociales -->
+        <ul class="pie-pagina-redes">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <img src="./img/icon-facebook.svg" alt="" class="icono-normal" />
+              <img
+                src="./img/icon-facebook-rojo.svg"
+                alt=""
+                class="icono-hover"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter">
+              <img src="./img/icon-twitter.svg" alt="" class="icono-normal" />
+              <img
+                src="./img/icon-twitter-rojo.svg"
+                alt=""
+                class="icono-hover"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
