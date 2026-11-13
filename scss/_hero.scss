@@ -40,23 +40,23 @@
 }
 // Forma azul detrás de la tablet, hasta el borde derecho de la pantalla
 .hero-ilustracion {
-  position: relative; // Para ubicar la forma respecto de la ilustración
-  z-index: 0; // Crea un nivel propio: la forma queda detrás de la imagen, no de la página
+  position: relative;
+  z-index: 0;
 
   &::after {
     content: "";
     position: absolute;
     top: 35%;
-    left: 30%;
-    width: 100vw;
-    height: 92%;
+    left: 35%;
+    width: 650px;    
+    height: 80%;
     background-color: $color-azul;
     border-bottom-left-radius: 200px; // La curva de abajo
     z-index: -1;
   }
 }
 
-// HERO EN CELULAR 
+// HERO EN CELULAR
 @media (max-width: $corte-celular) {
   .hero {
     flex-direction: column; // Ilustración arriba, texto abajo
@@ -67,10 +67,10 @@
 
   .hero-ilustracion {
     &::after {
-      top: 15%;       
-      left: 20%;      
-      width: 140vw;   
-      height: 95%;    
+      top: 15%;
+      left: 20%;
+      width: 140vw;
+      height: 95%;
     }
   }
 

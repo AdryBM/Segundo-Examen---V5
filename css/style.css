@@ -212,9 +212,9 @@ main {
   content: "";
   position: absolute;
   top: 35%;
-  left: 30%;
-  width: 100vw;
-  height: 92%;
+  left: 35%;
+  width: 650px;
+  height: 80%;
   background-color: #5267df;
   border-bottom-left-radius: 200px;
   z-index: -1;
@@ -309,9 +309,9 @@ main {
 .caracteristica-ilustracion::after {
   content: "";
   position: absolute;
-  top: 40%;
-  right: 20%;
-  width: 100vw;
+  top: 35%;
+  right: 35%;
+  width: 650px;
   height: 80%;
   background-color: #5267df;
   border-bottom-right-radius: 200px;
